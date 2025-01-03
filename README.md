@@ -7,9 +7,10 @@
 - Lighthouse Monitoring (Check for Lighthouse score and if it is above a certain threshold)
 - Uptime Monitoring (Check if the website is up and running)
 - SSL Monitoring (Check if the SSL certificate is valid)
+- Playwright Monitoring (Run custom Playwright scripts to check for specific things on the website)
+- Incident Management (View incidents that have occurred)
 
 ## Planned Features
-- Playwright Monitoring (Run custom Playwright scripts to check for specific things on the website)
 - DNS Monitoring (Check if the DNS records are valid and check if they ever change for security reasons)
 
 ## Installation
