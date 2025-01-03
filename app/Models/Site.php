@@ -31,7 +31,7 @@ class Site extends Model
         return $this->hasMany(SiteLighthouse::class);
     }
 
-    public function playwrites()
+    public function playwrights()
     {
         return $this->hasMany(SitePlaywright::class);
     }

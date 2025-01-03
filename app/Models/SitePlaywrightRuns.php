@@ -3,24 +3,26 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class SitePlaywriteStatus extends Model
+class SitePlaywrightRuns extends Model
 {
     use SoftDeletes;
 
     protected $fillable = [
-        'site_playwrite_id',
+        'site_playwright_id',
+        'batch',
         'passes',
         'failed_reason',
     ];
 
-    public function sitePlaywrite()
+    public function sitePlaywright(): BelongsTo
     {
-        return $this->belongsTo(SitePlaywrite::class);
+        return $this->belongsTo(SitePlaywright::class);
     }
 
-    protected function casts()
+    protected function casts(): array
     {
         return [
             'passes' => 'boolean',
