@@ -123,4 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'disable_registration' => env('APP_DISABLE_REGISTRATION', false),
+
 ];
