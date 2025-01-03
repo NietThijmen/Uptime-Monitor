@@ -20,6 +20,10 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('sites.inspect');
 
+\Livewire\Volt\Volt::route('sites/{site}/playwright', 'pages.sites.playwright-editor')
+    ->middleware(['auth'])
+    ->name('sites.playwright');
+
 \Livewire\Volt\Volt::route('incidents', 'pages.incident')
     ->middleware(['auth'])
     ->name('incidents');

@@ -138,14 +138,14 @@ new #[\Livewire\Attributes\Layout('layouts.app')] class extends Component {
         </h2>
 
         <div class="flex gap-2">
-            <button
+            <a
                 class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-flex items-center"
-                x-on:click.prevent="$dispatch('open-modal', 'site-form')"
-                x-data="{}"
+                href="{{ route('sites.playwright', $site) }}"
+                wire:navigate
             >
                 <i class="fas fa-plus-circle mr-2"></i>
-                Add New Site
-            </button>
+                Generate Playwright
+            </a>
 
             <button
                 class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center"

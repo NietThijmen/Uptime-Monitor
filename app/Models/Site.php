@@ -53,9 +53,4 @@ class Site extends Model
 
         return number_format($up / ($up + $down) * 100, 2);
     }
-
-    public function getRouteKeyName()
-    {
-        return 'name';
-    }
 }
