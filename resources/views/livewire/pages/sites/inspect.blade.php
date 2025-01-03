@@ -21,11 +21,11 @@ new #[\Livewire\Attributes\Layout('layouts.app')] class extends Component {
     private function get_latest_lighthouse()
     {
         $lighthouse = \App\Models\SiteLighthouse::latest()->first();
-        $this->lighthouse_performance = $lighthouse->performance;
-        $this->lighthouse_accessibility = $lighthouse->accessibility;
-        $this->lighthouse_bestPractices = $lighthouse->best_practices;
-        $this->lighthouse_seo = $lighthouse->seo;
-        $this->lighthouse_checkedAt = $lighthouse->created_at;
+        $this->lighthouse_performance = $lighthouse?->performance ?? 0;
+        $this->lighthouse_accessibility = $lighthouse?->accessibility ?? 0;
+        $this->lighthouse_bestPractices = $lighthouse?->best_practices ?? 0;
+        $this->lighthouse_seo = $lighthouse?->seo ?? 0;
+        $this->lighthouse_checkedAt = $lighthouse?->created_at ?? now();
     }
 
     private function get_latest_css_checker()
