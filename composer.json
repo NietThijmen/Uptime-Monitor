@@ -10,6 +10,7 @@
         "laravel/breeze": "^2.3",
         "laravel/framework": "^11.31",
         "laravel/pint": "^1.19",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.4",
         "livewire/volt": "^1.0",

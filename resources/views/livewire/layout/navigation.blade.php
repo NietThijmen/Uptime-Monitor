@@ -17,6 +17,11 @@ new class extends Component
             'icon' => 'fas fa-globe',
         ],
         [
+            'name' => 'Servers',
+            'route' => 'servers',
+            'icon' => 'fas fa-server',
+        ],
+        [
             'name' => 'Incidents',
             'route' => 'incidents',
             'icon' => 'fas fa-exclamation-triangle',

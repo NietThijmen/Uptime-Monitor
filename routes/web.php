@@ -16,6 +16,7 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('sites');
 
+
 \Livewire\Volt\Volt::route('sites/{site}', 'pages.sites.inspect')
     ->middleware(['auth'])
     ->name('sites.inspect');
@@ -23,6 +24,15 @@ Route::view('profile', 'profile')
 \Livewire\Volt\Volt::route('sites/{site}/playwright', 'pages.sites.playwright-editor')
     ->middleware(['auth'])
     ->name('sites.playwright');
+
+
+\Livewire\Volt\Volt::route('servers', 'pages.servers.server-overview')
+    ->middleware(['auth'])
+    ->name('servers');
+
+\Livewire\Volt\Volt::route('servers/{server}', 'pages.servers.inspect')
+    ->middleware(['auth'])
+    ->name('servers.inspect');
 
 \Livewire\Volt\Volt::route('incidents', 'pages.incident')
     ->middleware(['auth'])

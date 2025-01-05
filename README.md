@@ -9,6 +9,7 @@
 - SSL Monitoring (Check if the SSL certificate is valid)
 - Playwright Monitoring (Run custom Playwright scripts to check for specific things on the website)
 - Incident Management (View incidents that have occurred)
+- Server Monitoring (Check server statistics like CPU, RAM, Disk, more info below)
 
 ## Planned Features
 - DNS Monitoring (Check if the DNS records are valid and check if they ever change for security reasons)
@@ -48,6 +49,13 @@ sudo apt install chromium-browser
 1. Add a new website to monitor
 2. Your website should automagically start checking if you set everything up correctly
 3. You can view the results on the website and view incidents if they occur
+
+## Server Monitoring
+Server monitoring is done using a rust application that can be found here [github](https://github.com/NietThijmen/Uptime-Monitor-CLI)
+
+This should be run on the server you want to monitor (using a cronjob) and the output should be sent to the API of this application.
+
+How often you run this cronjob is up to you and how important the server is, but I recommend running it every minute.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
