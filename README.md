@@ -13,7 +13,7 @@
 
 ## Planned Features
 - DNS Monitoring (Check if the DNS records are valid and check if they ever change for security reasons)
-
+- Rule builder for incidents (E.G. If SSL expires in 3 days then make incident end)
 ## Installation
 ### Web server
 1. Make sure you have a system ready to run a laravel Application (for example a LAMP stack)
