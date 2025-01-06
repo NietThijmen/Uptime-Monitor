@@ -32,7 +32,9 @@ class PlaywrightCheck extends Command
             $batch = SitePlaywrightRuns::where('site_playwright_id', $playwright->id)->max('batch') + 1 ?? 1;
 
             \Log::info('[Playwright] Adding playwright to the queue: '.$playwright->id);
-            \App\Jobs\PlaywrightCheck::dispatch($playwright, $batch);
+            \App\Jobs\PlaywrightCheck::dispatch($playwright, $batch)->onQueue(
+                'playwright'
+            );
         }
     }
 }
