@@ -11,9 +11,7 @@
 - Incident Management (View incidents that have occurred)
 - Server Monitoring (Check server statistics like CPU, RAM, Disk, more info below)
 
-## Planned Features
-- DNS Monitoring (Check if the DNS records are valid and check if they ever change for security reasons)
-- Rule builder for incidents (E.G. If SSL expires in 3 days then make incident end)
+
 ## Installation
 ### Web server
 1. Make sure you have a system ready to run a laravel Application (for example a LAMP stack)
@@ -43,6 +41,20 @@ npm install chrome-launcher
 sudo apt install chromium-browser
 ```
 5. Run `php artisan queue:work --queue=lighthouse` to start the worker (this should be run in the background with a process manager like `supervisord`)
+
+### Playwright workerr
+1. Clone the repository
+2. Run `composer install`
+3. Install the playwright packages
+```shell
+cd playwright
+npm install
+```
+4. If on a server, make sure to download chrome and chrome-driver (following example is for Ubuntu/Debian)
+```shell
+npx playwright install --with-deps chromium
+```
+5. Run `php artisan queue:work --queue=playwright` to start the worker (this should be run in the background with a process manager like `supervisord`)
 
 
 ## Usage
